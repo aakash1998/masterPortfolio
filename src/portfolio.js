@@ -163,6 +163,7 @@ const certifications = {
   display: true
 };
 
+
 export {
   greeting,
   socialMediaLinks,
