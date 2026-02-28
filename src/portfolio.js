@@ -125,6 +125,44 @@ const contactInfo = {
   email_address: "aakash98.pt@gmail.com"
 };
 
+const certifications = {
+  certifications: [
+    {
+      title: "Machine Learning and Deep Learning Masters",
+      subtitle: "",
+      logo_path: "",
+      certificate_link: "",
+      alt_name: "",
+      color_code: "#8B0000"
+    },
+    {
+      title: "Apache PySpark by Example",
+      subtitle: "",
+      logo_path: "",
+      certificate_link: "",
+      alt_name: "",
+      color_code: "#0C9D58"
+    },
+    {
+      title: "Neo4j Fundamentals",
+      subtitle: "",
+      logo_path: "",
+      certificate_link: "",
+      alt_name: "",
+      color_code: "#1F70C1"
+    },
+    {
+      title: "Analyzing Big Data with Hive",
+      subtitle: "",
+      logo_path: "",
+      certificate_link: "",
+      alt_name: "",
+      color_code: "#F6B042"
+    },
+  ],
+  display: true
+};
+
 export {
   greeting,
   socialMediaLinks,
@@ -132,5 +170,6 @@ export {
   workExperiences,
   bigProjects,
   educationInfo,
-  contactInfo
+  contactInfo,
+  certifications
 };
