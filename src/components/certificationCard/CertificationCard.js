@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./CertificationCard.css";
 import { Fade } from "react-reveal";
+
 class CertificationCard extends Component {
   render() {
     const certificate = this.props.certificate;
@@ -54,4 +55,5 @@ class CertificationCard extends Component {
     );
   }
 }
+
 export default CertificationCard;
