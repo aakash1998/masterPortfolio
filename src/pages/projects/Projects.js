@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Header from "../../components/header/Header";
 import Footer from "../../components/footer/Footer";
-import GithubRepoCard from "../../components/githubRepoCard/GithubRepoCard";
-import PublicationCard from "../../components/publicationsCard/PublicationCard";
 import Button from "../../components/button/Button";
 import TopButton from "../../components/topButton/TopButton";
 import { Fade } from "react-reveal";
@@ -12,9 +10,31 @@ import {
   publicationsHeader,
   publications,
 } from "../../portfolio.js";
-import ProjectsData from "../../shared/opensource/projects.json";
 import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
+
+const myProjects = [
+  {
+    name: "Agentic Advisor Data Scraper",
+    description: "An agentic AI pipeline that takes a company name and address, searches the web using Bing Grounding Search, finds the company website, extracts advisor data, and pushes it into HubSpot — fully automated, no human in the loop.",
+    tech: "Python • Bing Grounding Search • HubSpot API • Azure",
+  },
+  {
+    name: "Automated LinkedIn Content Generator",
+    description: "A fully automated content pipeline — searches the web for trending AI/tech topics, generates posts using Claude, refines with OpenAI, and auto-publishes to LinkedIn via API. Zero manual effort.",
+    tech: "Python • Claude API • OpenAI API • LinkedIn API",
+  },
+  {
+    name: "AI-Powered Release Documentation",
+    description: "Built on Azure AI Foundry — detects changes in ADF and Python projects, calls Claude LLM to generate intelligent summaries, and automatically updates Confluence on every release. Eliminated all manual documentation.",
+    tech: "Azure AI Foundry • Claude LLM • Python • Confluence API",
+  },
+  {
+    name: "Rental Market Web Scraper",
+    description: "Web scraping agent built with Sequentum to capture Canadian rental market data, optimized for API rate limits and cost efficiency. Reduced daily operational costs by 73% — from $150+/day to under $40/day.",
+    tech: "Sequentum • Python • Azure • Cost Optimization",
+  },
+];
 
 class Projects extends Component {
   render() {
@@ -26,23 +46,13 @@ class Projects extends Component {
           <Fade bottom duration={2000} distance="40px">
             <div className="projects-heading-div">
               <div className="projects-heading-img-div">
-                {/* <img
-											src={require(`../../assets/images/${projectsHeader["avatar_image_path"]}`)}
-											alt=""
-										/> */}
                 <ProjectsImg theme={theme} />
               </div>
               <div className="projects-heading-text-div">
-                <h1
-                  className="projects-heading-text"
-                  style={{ color: theme.text }}
-                >
+                <h1 className="projects-heading-text" style={{ color: theme.text }}>
                   {projectsHeader.title}
                 </h1>
-                <p
-                  className="projects-header-detail-text subTitle"
-                  style={{ color: theme.secondaryText }}
-                >
+                <p className="projects-header-detail-text subTitle" style={{ color: theme.secondaryText }}>
                   {projectsHeader["description"]}
                 </p>
               </div>
@@ -50,34 +60,36 @@ class Projects extends Component {
           </Fade>
         </div>
         <div className="repo-cards-div-main">
-          {ProjectsData.data.map((repo) => {
-            return <GithubRepoCard repo={repo} theme={theme} />;
+          {myProjects.map((project, index) => {
+            return (
+              <Fade bottom duration={2000} distance="40px" key={index}>
+                <div className="repo-card-div" style={{ backgroundColor: theme.highlight }}>
+                  <div style={{ padding: "20px" }}>
+                    <h2 style={{ color: theme.text, marginBottom: 10 }}>{project.name}</h2>
+                    <p style={{ color: theme.secondaryText, marginBottom: 15, lineHeight: 1.6 }}>{project.description}</p>
+                    <p style={{ color: theme.text, fontWeight: "bold", fontSize: 13 }}>{project.tech}</p>
+                  </div>
+                </div>
+              </Fade>
+            );
           })}
         </div>
         <Button
-          text={"More Projects"}
+          text={"See My GitHub"}
           className="project-button"
           href={greeting.githubProfile}
           newTab={true}
           theme={theme}
         />
-
-        {/* Publications  */}
         {publications.data.length > 0 ? (
           <div className="basic-projects">
             <Fade bottom duration={2000} distance="40px">
               <div className="publications-heading-div">
                 <div className="publications-heading-text-div">
-                  <h1
-                    className="publications-heading-text"
-                    style={{ color: theme.text }}
-                  >
+                  <h1 className="publications-heading-text" style={{ color: theme.text }}>
                     {publicationsHeader.title}
                   </h1>
-                  <p
-                    className="projects-header-detail-text subTitle"
-                    style={{ color: theme.secondaryText }}
-                  >
+                  <p className="projects-header-detail-text subTitle" style={{ color: theme.secondaryText }}>
                     {publicationsHeader["description"]}
                   </p>
                 </div>
@@ -85,13 +97,6 @@ class Projects extends Component {
             </Fade>
           </div>
         ) : null}
-
-        <div className="repo-cards-div-main">
-          {publications.data.map((pub) => {
-            return <PublicationCard pub={pub} theme={theme} />;
-          })}
-        </div>
-
         <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
         <TopButton theme={this.props.theme} />
       </div>
