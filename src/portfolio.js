@@ -255,6 +255,11 @@ const contactPageData = {
   },
 };
 
+const openSource = {
+  showGithubProfile: "false",
+  display: false
+};
+
 export {
   settings,
   seo,
@@ -269,4 +274,5 @@ export {
   publicationsHeader,
   publications,
   contactPageData,
+  openSource
 };
