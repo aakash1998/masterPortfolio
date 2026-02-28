@@ -100,7 +100,7 @@ const degrees = {
     {
       title: "A.D. Patel Institute of Technology",
       subtitle: "Bachelor's in Computer Engineering",
-      logo_path: "codeinLogo.png",
+      logo_path: "codeInLogo.png",
       alt_name: "ADIT",
       duration: "2018 - 2022",
       descriptions: [
