@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./CertificationCard.css";
 import { Fade } from "react-reveal";
-
 class CertificationCard extends Component {
   render() {
     const certificate = this.props.certificate;
@@ -10,7 +9,7 @@ class CertificationCard extends Component {
       <Fade bottom duration={2000} distance="20px">
         <div className="cert-card">
           <div className="content">
-            <a
+            
               href={certificate.certificate_link}
               target="_blank"
               rel="noopener noreferrer"
@@ -20,11 +19,17 @@ class CertificationCard extends Component {
                 className="cert-header"
                 style={{ backgroundColor: certificate.color_code }}
               >
-                <img
-                  className="logo_img"
-                  src={require(`../../assets/images/${certificate.logo_path}`)}
-                  alt={certificate.alt_name}
-                />
+                {certificate.logo_path ? (
+                  <img
+                    className="logo_img"
+                    src={require(`../../assets/images/${certificate.logo_path}`)}
+                    alt={certificate.alt_name}
+                  />
+                ) : (
+                  <h2 style={{ color: "white", padding: "10px", fontSize: "14px" }}>
+                    {certificate.alt_name || certificate.title}
+                  </h2>
+                )}
               </div>
               <div className="content-details fadeIn-top">
                 <h3 className="content-title" style={{ color: theme.body }}>
@@ -49,5 +54,4 @@ class CertificationCard extends Component {
     );
   }
 }
-
 export default CertificationCard;
