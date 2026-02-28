@@ -88,9 +88,9 @@ const degrees = {
     {
       title: "Trent University",
       subtitle: "Master's in Big Data Analytics",
-      logo_path: "",
+      logo_path: "trent.png",
       alt_name: "Trent University",
-      duration: "",
+      duration: "2021 - 2022",
       descriptions: [
         "⚡ Studied Big Data, Machine Learning, and Data Engineering",
         "⚡ Built ML projects: fake news detection, credit card fraud detection, flight fare prediction, text classification",
@@ -100,9 +100,9 @@ const degrees = {
     {
       title: "A.D. Patel Institute of Technology",
       subtitle: "Bachelor's in Computer Engineering",
-      logo_path: "",
+      logo_path: "adit.png",
       alt_name: "ADIT",
-      duration: "",
+      duration: "2018 - 2022",
       descriptions: [
         "⚡ Published research on Data Mining Algorithms and Indian Paper Currency Detection using OpenCV",
       ],
