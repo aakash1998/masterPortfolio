@@ -125,7 +125,7 @@
 
 /* 69em = 1104px */
 
-@media (min-width: 69em) {
+@media (min-width: 60em) {
   .header li {
     float: left;
   }
@@ -133,9 +133,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: nowrap;
   }
   .header .menu {
     max-height: none;
+    display: flex;
+    white-space: nowrap;
+  }
+  .header li a {
+    padding: 20px 12px;
   }
   .header .menu-icon {
     display: none;
