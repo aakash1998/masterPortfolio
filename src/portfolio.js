@@ -163,7 +163,10 @@ const certifications = {
   display: true
 };
 
-
+const competitiveSites = {
+  competitiveSites: [],
+  display: false
+};
 export {
   greeting,
   socialMediaLinks,
@@ -172,5 +175,6 @@ export {
   bigProjects,
   educationInfo,
   contactInfo,
-  certifications
+  certifications,
+  competitiveSites
 };
