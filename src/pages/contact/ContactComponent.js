@@ -27,12 +27,17 @@ class Contact extends Component {
                 <div style={{ marginTop: 20 }}>
                   <a href="mailto:aakash98.pt@gmail.com" style={{ textDecoration: "none" }}>
                     <div style={{ backgroundColor: theme.headerColor, padding: "12px 24px", borderRadius: 8, display: "inline-block", marginRight: 10 }}>
-                      <p style={{ color: "white", margin: 0, fontWeight: "bold" }}><span role="img" aria-label="email">📧</span> Email Me</p>
+                      <p style={{ color: "white", margin: 0, fontWeight: "bold" }}>Email Me</p>
                     </div>
                   </a>
                   <a href="https://www.linkedin.com/in/aakashpatel05" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
-                    <div style={{ backgroundColor: "#0077B5", padding: "12px 24px", borderRadius: 8, display: "inline-block" }}>
-                      <p style={{ color: "white", margin: 0, fontWeight: "bold" }}><span role="img" aria-label="linkedin">💼</span> LinkedIn</p>
+                    <div style={{ backgroundColor: "#0077B5", padding: "12px 24px", borderRadius: 8, display: "inline-block", marginRight: 10 }}>
+                      <p style={{ color: "white", margin: 0, fontWeight: "bold" }}>LinkedIn</p>
+                    </div>
+                  </a>
+                  <a href="/Aakash_Patel_Resume.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    <div style={{ backgroundColor: "#28a745", padding: "12px 24px", borderRadius: 8, display: "inline-block" }}>
+                      <p style={{ color: "white", margin: 0, fontWeight: "bold" }}>Download Resume</p>
                     </div>
                   </a>
                 </div>
