@@ -1,128 +1,114 @@
+const settings = {
+  isSplash: false,
+};
+
+const seo = {
+  title: "Aakash Patel",
+  description: "Data Engineer → AI Builder | Azure • Python • Agentic AI | Turning messy problems into automated systems.",
+  og: {
+    title: "Aakash Patel Portfolio",
+    type: "website",
+    image: "",
+  },
+};
+
 const greeting = {
-  username: "Aakash Patel",
   title: "Hi, I'm Aakash",
-  subTitle: "Data Engineer → AI Builder | I turn messy problems into automated systems using Azure, Python, and Agentic AI.",
+  logo_name: "AakashPatel",
+  nickname: "AI Builder",
+  subTitle: "Data Engineer → AI Builder. I turn messy problems into automated systems using Azure, Python, and Agentic AI.",
   resumeLink: "",
-  displayGreeting: true
+  portfolio_repository: "https://github.com/aakash1998/masterPortfolio",
+  githubProfile: "https://github.com/aakash1998",
 };
 
-const socialMediaLinks = {
-  linkedin: "https://www.linkedin.com/in/aakashpatel05",
-  github: "https://github.com/aakash1998",
-  gmail: "aakash98.pt@gmail.com",
-  display: true
-};
+const socialMediaLinks = [
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/aakashpatel05",
+    fontAwesomeIcon: "fa-linkedin-in",
+    backgroundColor: "#0077B5",
+  },
+  {
+    name: "Gmail",
+    link: "mailto:aakash98.pt@gmail.com",
+    fontAwesomeIcon: "fa-google",
+    backgroundColor: "#D14836",
+  },
+  {
+    name: "Github",
+    link: "https://github.com/aakash1998",
+    fontAwesomeIcon: "fa-github",
+    backgroundColor: "#181717",
+  },
+];
 
-const skillsSection = {
-  title: "What I Do",
-  subTitle: "I build AI-powered systems, automate workflows, and engineer data pipelines that actually work at scale.",
-  skills: [
-    "⚡ Build agentic AI solutions that operate autonomously — no human in the loop",
-    "⚡ Design and deploy data pipelines on Azure and AWS",
-    "⚡ Integrate LLMs (Claude, OpenAI) into real business workflows",
-    "⚡ Automate manual processes end-to-end using Python and cloud tools",
-    "⚡ Build chatbots and AI copilots for internal teams",
-  ],
-  softwareSkills: [
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "Azure", fontAwesomeClassname: "fab fa-microsoft" },
-    { skillName: "AWS", fontAwesomeClassname: "fab fa-aws" },
-    { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
-    { skillName: "Git", fontAwesomeClassname: "fab fa-git-alt" },
-    { skillName: "Linux", fontAwesomeClassname: "fab fa-linux" },
-    { skillName: "SQL", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "OpenAI", fontAwesomeClassname: "fas fa-robot" },
-  ],
-  display: true
-};
-
-const workExperiences = {
-  display: true,
-  experience: [
+const skills = {
+  data: [
     {
-      role: "Data Engineer",
-      company: "Avenue Living",
-      companylogo: "",
-      date: "July 2025 – Present",
-      desc: "Building agentic AI solutions and data pipelines on Azure.",
-      descBullets: [
-        "Built an agentic AI system using Bing Grounding Search to scrape advisor data and push it into HubSpot — fully automated",
-        "Integrated Azure AI Foundry with Claude LLM to auto-generate documentation on every code release",
-        "Cut daily operational costs by 73% through intelligent scraping and pipeline optimization",
-        "Manage CI/CD pipelines, DevOps, and automation initiatives across data workflows",
-      ]
+      title: "AI & Automation",
+      fileName: "DataScienceImg",
+      skills: [
+        "⚡ Build agentic AI solutions that operate autonomously — no human in the loop",
+        "⚡ Integrate LLMs (Claude, OpenAI) into real business workflows",
+        "⚡ Build chatbots and AI copilots for internal teams",
+        "⚡ Automate manual processes end-to-end using Python and cloud tools",
+      ],
+      softwareSkills: [
+        { skillName: "Python", fontAwesomeClassname: "ion-logo-python", style: { backgroundColor: "transparent", color: "#3776AB" } },
+        { skillName: "Azure", fontAwesomeClassname: "simple-icons:microsoftazure", style: { color: "#0089D6" } },
+        { skillName: "OpenAI", fontAwesomeClassname: "simple-icons:openai", style: { color: "#412991" } },
+      ],
     },
     {
-      role: "Data Engineer",
-      company: "Citi",
-      companylogo: "",
-      date: "May 2022 – June 2025",
-      desc: "Designed and deployed scalable data pipelines in high-demand production environments.",
-      descBullets: [
-        "Built ETL pipelines using AWS Glue, Apache Spark, and PySpark on EMR",
-        "Built real-time streaming apps using Kafka, Kinesis, Redshift, and DynamoDB",
-        "Migrated monitoring tools to Lambda — serverless, automated, cheaper",
-        "Optimized Redshift clusters significantly improving BI query performance",
-      ]
-    }
-  ]
-};
-
-const bigProjects = {
-  title: "Projects",
-  subtitle: "AI and automation projects I've built",
-  projects: [
-    {
-      projectName: "Agentic Advisor Data Scraper",
-      projectDesc: "An agentic AI pipeline that takes a company name and address, searches the web using Bing Grounding Search, finds the company website, extracts advisor data, and pushes it into HubSpot — fully automated, no human in the loop.",
-      footerLink: []
-    },
-    {
-      projectName: "Automated LinkedIn Content Generator",
-      projectDesc: "A fully automated content pipeline — searches the web for trending AI/tech topics, generates posts using Claude, refines with OpenAI, and auto-publishes to LinkedIn via API. Zero manual effort.",
-      footerLink: []
-    },
-    {
-      projectName: "AI-Powered Release Documentation",
-      projectDesc: "Built on Azure AI Foundry — detects changes in ADF and Python projects, calls Claude LLM to generate intelligent summaries, and automatically updates Confluence on every release.",
-      footerLink: []
-    },
-    {
-      projectName: "Internal Q&A Chatbot",
-      projectDesc: "A RAG-based chatbot built with Azure OpenAI, LangChain, and Copilot Studio — allows teams to query internal documents and get instant AI-powered answers.",
-      footerLink: []
+      title: "Data Engineering",
+      fileName: "CloudInfraImg",
+      skills: [
+        "⚡ Design and deploy scalable data pipelines on Azure and AWS",
+        "⚡ Build real-time streaming applications using Kafka and Kinesis",
+        "⚡ Optimize data warehouses for high-performance analytics",
+      ],
+      softwareSkills: [
+        { skillName: "AWS", fontAwesomeClassname: "simple-icons:amazonaws", style: { color: "#FF9900" } },
+        { skillName: "Azure", fontAwesomeClassname: "simple-icons:microsoftazure", style: { color: "#0089D6" } },
+        { skillName: "Spark", fontAwesomeClassname: "simple-icons:apachespark", style: { color: "#E25A1C" } },
+        { skillName: "Snowflake", fontAwesomeClassname: "simple-icons:snowflake", style: { color: "#29B5E8" } },
+        { skillName: "Kafka", fontAwesomeClassname: "simple-icons:apachekafka", style: { color: "#231F20" } },
+      ],
     },
   ],
-  display: true
 };
 
-const educationInfo = {
-  display: true,
-  schools: [
+const competitiveSites = {
+  competitiveSites: [],
+};
+
+const degrees = {
+  degrees: [
     {
-      schoolName: "Trent University",
-      logo: "",
-      subHeader: "Master's in Big Data Analytics",
+      title: "Trent University",
+      subtitle: "Master's in Big Data Analytics",
+      logo_path: "",
+      alt_name: "Trent University",
       duration: "",
-      desc: "",
-      descBullets: []
+      descriptions: [
+        "⚡ Studied Big Data, Machine Learning, and Data Engineering",
+        "⚡ Built ML projects: fake news detection, credit card fraud detection, flight fare prediction, text classification",
+      ],
+      website_link: "https://www.trentu.ca",
     },
     {
-      schoolName: "A.D. Patel Institute of Technology",
-      logo: "",
-      subHeader: "Bachelor's in Computer Engineering",
+      title: "A.D. Patel Institute of Technology",
+      subtitle: "Bachelor's in Computer Engineering",
+      logo_path: "",
+      alt_name: "ADIT",
       duration: "",
-      desc: "",
-      descBullets: []
-    }
-  ]
-};
-
-const contactInfo = {
-  title: "Let's Talk",
-  subtitle: "Open to discussing data, AI, automation, or new opportunities. My inbox is always open.",
-  number: "+1-343-580-0147",
-  email_address: "aakash98.pt@gmail.com"
+      descriptions: [
+        "⚡ Published research on Data Mining Algorithms and Indian Paper Currency Detection using OpenCV",
+      ],
+      website_link: "",
+    },
+  ],
 };
 
 const certifications = {
@@ -133,7 +119,7 @@ const certifications = {
       logo_path: "",
       certificate_link: "",
       alt_name: "",
-      color_code: "#8B0000"
+      color_code: "#8B0000",
     },
     {
       title: "Apache PySpark by Example",
@@ -141,7 +127,7 @@ const certifications = {
       logo_path: "",
       certificate_link: "",
       alt_name: "",
-      color_code: "#0C9D58"
+      color_code: "#0C9D58",
     },
     {
       title: "Neo4j Fundamentals",
@@ -149,7 +135,7 @@ const certifications = {
       logo_path: "",
       certificate_link: "",
       alt_name: "",
-      color_code: "#1F70C1"
+      color_code: "#1F70C1",
     },
     {
       title: "Analyzing Big Data with Hive",
@@ -157,24 +143,130 @@ const certifications = {
       logo_path: "",
       certificate_link: "",
       alt_name: "",
-      color_code: "#F6B042"
+      color_code: "#F6B042",
     },
   ],
-  display: true
 };
 
-const competitiveSites = {
-  competitiveSites: [],
-  display: false
+const experience = {
+  title: "Experience",
+  subtitle: "Work Experience",
+  description: "Data Engineer with 4+ years of experience building AI-powered automation systems and scalable data pipelines.",
+  header_image_path: "",
+  sections: [
+    {
+      title: "Work",
+      work: true,
+      experiences: [
+        {
+          title: "Data Engineer",
+          company: "Avenue Living",
+          company_url: "",
+          logo_path: "",
+          duration: "July 2025 - Present",
+          location: "Calgary, Alberta, Canada",
+          description: "Building agentic AI solutions and data pipelines on Azure.",
+          descBullets: [
+            "Built an agentic AI system using Bing Grounding Search to scrape advisor data and push into HubSpot — fully automated",
+            "Integrated Azure AI Foundry with Claude LLM to auto-generate documentation on every code release",
+            "Cut daily operational costs by 73% through intelligent scraping and pipeline optimization",
+            "Manage CI/CD pipelines, DevOps, and automation initiatives",
+          ],
+          color: "#0879bf",
+        },
+        {
+          title: "Data Engineer",
+          company: "Citi",
+          company_url: "",
+          logo_path: "",
+          duration: "May 2022 - June 2025",
+          location: "",
+          description: "Designed and deployed scalable data pipelines in high-demand production environments.",
+          descBullets: [
+            "Built ETL pipelines using AWS Glue, Apache Spark, and PySpark on EMR",
+            "Built real-time streaming apps using Kafka, Kinesis, Redshift, and DynamoDB",
+            "Migrated monitoring tools to Lambda — serverless, automated, cheaper",
+            "Optimized Redshift clusters improving BI query performance significantly",
+          ],
+          color: "#9b1578",
+        },
+      ],
+    },
+  ],
 };
+
+const projectsHeader = {
+  title: "Projects",
+  description: "AI and automation projects I've built — real problems, real solutions.",
+  avatar_image_path: "",
+};
+
+const publicationsHeader = {
+  title: "Publications",
+  description: "Research publications from my academic work.",
+  avatar_image_path: "",
+};
+
+const publications = {
+  data: [
+    {
+      id: "1",
+      name: "Data Mining Algorithms",
+      createdAt: "",
+      description: "Research on data mining algorithms and their applications.",
+      url: "",
+    },
+    {
+      id: "2",
+      name: "Indian Paper Currency Detection using OpenCV3, Python and Digital Image Processing",
+      createdAt: "",
+      description: "Computer vision research on currency detection.",
+      url: "",
+    },
+  ],
+};
+
+const contactPageData = {
+  contactSection: {
+    title: "Contact Me",
+    profile_image_path: "",
+    description: "Open to discussing data, AI, automation, or new opportunities. My inbox is always open.",
+  },
+  blogSection: {
+    title: "",
+    subtitle: "",
+    link: "",
+    avatar_image_path: "",
+  },
+  addressSection: {
+    title: "Location",
+    subtitle: "Calgary, Alberta, Canada",
+    locality: "Calgary",
+    country: "CA",
+    region: "Alberta",
+    postalCode: "",
+    streetAddress: "",
+    avatar_image_path: "",
+    location_map_link: "",
+  },
+  phoneSection: {
+    title: "Phone",
+    subtitle: "+1-343-580-0147",
+  },
+};
+
 export {
+  settings,
+  seo,
   greeting,
   socialMediaLinks,
-  skillsSection,
-  workExperiences,
-  bigProjects,
-  educationInfo,
-  contactInfo,
+  skills,
+  competitiveSites,
+  degrees,
   certifications,
-  competitiveSites
+  experience,
+  projectsHeader,
+  publicationsHeader,
+  publications,
+  contactPageData,
 };
