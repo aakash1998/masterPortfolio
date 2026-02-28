@@ -1,3 +1,19 @@
+import React, { Component } from "react";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import Button from "../../components/button/Button";
+import TopButton from "../../components/topButton/TopButton";
+import PublicationCard from "../../components/publicationsCard/PublicationCard";
+import { Fade } from "react-reveal";
+import {
+  greeting,
+  projectsHeader,
+  publicationsHeader,
+  publications,
+} from "../../portfolio.js";
+import "./Projects.css";
+import ProjectsImg from "./ProjectsImg";
+
 const myProjects = [
   {
     name: "Agentic Advisor Data Scraper",
@@ -30,3 +46,76 @@ const myProjects = [
     tech: "Python • NLP • Scikit-learn • TF-IDF • Logistic Regression • Random Forest",
   },
 ];
+
+class Projects extends Component {
+  render() {
+    const theme = this.props.theme;
+    return (
+      <div className="projects-main">
+        <Header theme={theme} />
+        <div className="basic-projects">
+          <Fade bottom duration={2000} distance="40px">
+            <div className="projects-heading-div">
+              <div className="projects-heading-img-div">
+                <ProjectsImg theme={theme} />
+              </div>
+              <div className="projects-heading-text-div">
+                <h1 className="projects-heading-text" style={{ color: theme.text }}>
+                  {projectsHeader.title}
+                </h1>
+                <p className="projects-header-detail-text subTitle" style={{ color: theme.secondaryText }}>
+                  {projectsHeader["description"]}
+                </p>
+              </div>
+            </div>
+          </Fade>
+        </div>
+        <div className="repo-cards-div-main">
+          {myProjects.map((project, index) => {
+            return (
+              <Fade bottom duration={2000} distance="40px" key={index}>
+                <div className="repo-card-div" style={{ backgroundColor: theme.highlight }}>
+                  <div style={{ padding: "20px" }}>
+                    <h2 style={{ color: theme.text, marginBottom: 10 }}>{project.name}</h2>
+                    <p style={{ color: theme.secondaryText, marginBottom: 15, lineHeight: 1.6 }}>{project.description}</p>
+                    <p style={{ color: theme.text, fontWeight: "bold", fontSize: 13 }}>{project.tech}</p>
+                  </div>
+                </div>
+              </Fade>
+            );
+          })}
+        </div>
+        <Button
+          text={"See My GitHub"}
+          className="project-button"
+          href={greeting.githubProfile}
+          newTab={true}
+          theme={theme}
+        />
+        <div className="basic-projects">
+          <Fade bottom duration={2000} distance="40px">
+            <div className="publications-heading-div">
+              <div className="publications-heading-text-div">
+                <h1 className="publications-heading-text" style={{ color: theme.text }}>
+                  {publicationsHeader.title}
+                </h1>
+                <p className="projects-header-detail-text subTitle" style={{ color: theme.secondaryText }}>
+                  {publicationsHeader["description"]}
+                </p>
+              </div>
+            </div>
+          </Fade>
+        </div>
+        <div className="repo-cards-div-main">
+          {publications.data.map((pub) => {
+            return <PublicationCard pub={pub} theme={theme} />;
+          })}
+        </div>
+        <Footer theme={this.props.theme} onToggle={this.props.onToggle} />
+        <TopButton theme={this.props.theme} />
+      </div>
+    );
+  }
+}
+
+export default Projects;
