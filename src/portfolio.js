@@ -88,7 +88,7 @@ const degrees = {
     {
       title: "Trent University",
       subtitle: "Master's in Big Data Analytics",
-      logo_path: "trent.png",
+      logo_path: "coursera_logo.png",
       alt_name: "Trent University",
       duration: "2021 - 2022",
       descriptions: [
@@ -100,7 +100,7 @@ const degrees = {
     {
       title: "A.D. Patel Institute of Technology",
       subtitle: "Bachelor's in Computer Engineering",
-      logo_path: "adit.png",
+      logo_path: "codeinLogo.png",
       alt_name: "ADIT",
       duration: "2018 - 2022",
       descriptions: [
@@ -110,7 +110,6 @@ const degrees = {
     },
   ],
 };
-
 const certifications = {
   certifications: [
     {
