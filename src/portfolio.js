@@ -210,17 +210,10 @@ const publications = {
   data: [
     {
       id: "1",
-      name: "Data Mining Algorithms",
-      createdAt: "",
-      description: "Research on data mining algorithms and their applications.",
-      url: "",
-    },
-    {
-      id: "2",
       name: "Indian Paper Currency Detection using OpenCV3, Python and Digital Image Processing",
-      createdAt: "",
-      description: "Computer vision research on currency detection.",
-      url: "",
+      createdAt: "2019-01-01",
+      description: "Computer vision research on detecting and classifying Indian paper currency using OpenCV3, Python, and Digital Image Processing techniques.",
+      url: "https://www.ijsrd.com/articles/IJSRDV7I60113.pdf",
     },
   ],
 };
