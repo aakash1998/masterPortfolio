@@ -14,7 +14,7 @@ const seo = {
 
 const greeting = {
   title: "Hi, I'm Aakash",
-  logo_name: "AakashPatel",
+  logo_name: "Aakash Patel",
   nickname: "AI Builder",
   subTitle: "Data Engineer → AI Builder. I turn messy problems into automated systems using Azure, Python, and Agentic AI.",
   resumeLink: "",
