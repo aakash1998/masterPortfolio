@@ -15,11 +15,27 @@ import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 
 const myProjects = [
+
+  {
+  name: "TaxMind — RAG Tax Document Chatbot",
+  description: "Built a production-style RAG chatbot that lets tax professionals upload PDFs and query them in plain English. Powered by Azure OpenAI (GPT-4o-mini), Azure AI Search for vector storage, and LangChain for orchestration. Features conversation memory, auto document summary on upload, source citations, dynamic multi-index support, and guardrails to keep answers document-scoped.",
+  tech: "Python • Azure OpenAI • Azure AI Search • LangChain • Streamlit • RAG",
+},
   {
     name: "Agentic Advisor Data Scraper",
     description: "Built a fully agentic AI pipeline that takes a company name and address, autonomously searches the web using Bing Grounding Search, identifies the correct company website, and extracts advisor/contact data. The extracted data is then automatically pushed into HubSpot CRM — no human in the loop at any stage. Reduced hours of manual research to zero.",
     tech: "Python • Bing Grounding Search • HubSpot API • Azure",
   },
+  {
+  name: "FinAudit AI — Financial Document Audit Pipeline",
+  description: "Automated financial document audit pipeline. Extracts, validates, and flags anomalies across invoices and financial reports using Python and LLMs — replacing hours of manual review with a fully automated system.",
+  tech: "Python • LLMs • Azure • Document Intelligence • ETL",
+},
+{
+  name: "Telegram Expense Tracker Bot",
+  description: "Built a personal finance bot that logs expenses in 3 seconds — just send a voice note or text on Telegram. AI transcribes your voice, understands what you spent, auto-categorizes it, and logs it instantly to Google Sheets. No app, no spreadsheet, no forgetting. Built on Python, Telegram Bot API, Google Gemini 2.0 Flash (free tier), and Google Sheets API. Total cost: $0/month.",
+  tech: "Python • Telegram Bot API • Google Gemini 2.0 Flash • Google Sheets API • Voice Transcription",
+},
   {
     name: "Automated LinkedIn Content Generator",
     description: "Built a fully automated content pipeline for LinkedIn. The system searches the web for trending topics in AI and tech, generates a hook and full post using Claude API, refines the tone and quality further using OpenAI, and auto-publishes directly to LinkedIn via API. From topic discovery to published post — zero manual effort, start to finish.",
