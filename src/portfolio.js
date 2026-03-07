@@ -102,7 +102,7 @@ const degrees = {
       subtitle: "Bachelor's in Computer Engineering",
       logo_path: "codeInLogo.png",
       alt_name: "ADIT",
-      duration: "2018 - 2022",
+      duration: "2016 - 2020",
       descriptions: [
         "⚡ Published research on Data Mining Algorithms and Indian Paper Currency Detection using OpenCV",
       ],
