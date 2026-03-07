@@ -174,7 +174,7 @@ class Chatbot extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false,
+      isOpen: true,
       messages: [
         { role: "assistant", content: "Hi! I'm Aakash's AI assistant. Ask me anything about his experience, projects, or skills — or any general AI/tech questions!" }
       ],
