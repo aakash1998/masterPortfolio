@@ -15,7 +15,11 @@ import "./Projects.css";
 import ProjectsImg from "./ProjectsImg";
 
 const myProjects = [
-
+{
+  name: "Client Bot — Enterprise RAG Platform",
+  description: "Production-grade multi-client RAG chatbot built on a full Azure enterprise stack. Uses Azure Document Intelligence for intelligent document extraction, Azure AI Search for vector storage with OData client filtering to enforce strict client data isolation, GPT-4o-mini for responses, and Cosmos DB for persistent conversation history across sessions. Each client's data is completely isolated at the architecture level — not by process. Built to the standard of a real enterprise deployment.",
+  tech: "Python • FastAPI • Azure OpenAI • Azure Document Intelligence • Azure AI Search • Cosmos DB • LangChain",
+},
   {
   name: "TaxMind — RAG Tax Document Chatbot",
   description: "Built a production-style RAG chatbot that lets tax professionals upload PDFs and query them in plain English. Powered by Azure OpenAI (GPT-4o-mini), Azure AI Search for vector storage, and LangChain for orchestration. Features conversation memory, auto document summary on upload, source citations, dynamic multi-index support, and guardrails to keep answers document-scoped.",
